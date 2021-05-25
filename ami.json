@@ -42,7 +42,7 @@
       "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'",
       "inline": [
         "sudo useradd -G wheel rvadisala",
-	      "sudo mkdir -p /home/rvadisala/.ssh",
+	"sudo mkdir -p /home/rvadisala/.ssh",
       	"echo redhat@123 | sudo passwd --stdin rvadisala"
       ]
     },
@@ -54,9 +54,9 @@
     {
         "type": "shell",
         "inline":[
-	        "sudo mv /tmp/authorized_keys /home/rvadisala/.ssh/",
-	        "sudo chown -R rvadisala:rvadisala /home/rvadisala/",
-	        "sudo chmod 600 /home/rvadisala/.ssh/authorized_keys",
+	  "sudo mv /tmp/authorized_keys /home/rvadisala/.ssh/",
+	  "sudo chown -R rvadisala:rvadisala /home/rvadisala/",
+	  "sudo chmod 600 /home/rvadisala/.ssh/authorized_keys",
           "sudo ls -alR /home/rvadisala/",
           "sudo cat /home/rvadisala/.ssh/authorized_keys"
         ]
